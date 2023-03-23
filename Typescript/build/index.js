@@ -1,18 +1,16 @@
 "use strict";
 /**
- * Funções
- *
+ * Classes
  */
-function addNumber(x, y) {
-    return x + y;
+class Character {
+    constructor(name, stregth, skill) {
+        this.name = name,
+            this.stregth = stregth,
+            this.skill = skill;
+    }
+    attack() {
+        console.log(`Attack with ${this.stregth} points`);
+    }
 }
-let soma = addNumber(4, 8);
-console.log(soma);
-function addHello(name) {
-    return `Hello ${name}`;
-}
-console.log(addHello('Tiago'));
-function callToPhone(phone) {
-    return phone;
-}
-console.log(callToPhone(1211212121));
+const p1 = new Character("Superman", 10, 98);
+p1.attack();

@@ -1,30 +1,27 @@
 /**
- * Funções
- * 
+ * Classes
  */
 
-function addNumber(x: number, y: number): number {
-  return x + y
+class Character {
+  name: string;
+  stregth: number;
+  skill: number;
+
+  constructor(name: string, stregth: number, skill: number){
+    this.name = name,
+    this.stregth = stregth,
+    this.skill = skill
+
+  }
+
+  attack(): void{
+    console.log(`Attack with ${this.stregth} points`);
+    
+  }
 }
 
-let soma: number = addNumber(4,8)
-console.log(soma);
+const p1 = new Character("Superman",10,98)
+
+p1.attack();
 
 
-function addHello(name: string): string {
-  return `Hello ${name}` 
-}
-
-console.log(addHello('Tiago'));
-
-function callToPhone( phone: number | string): number | string {
-  return phone;
-
-}
-
-console.log(callToPhone(1211212121));
-
-
-async function getDatabase(id: number | string): Promise<string | number>{
-  return "Tiago"
-}
