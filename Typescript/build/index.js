@@ -1,8 +1,9 @@
 "use strict";
-function printaObjetos(pessoa) {
-    console.log(pessoa);
+/**
+ * Funções
+ *
+ */
+function addNumber(x, y) {
+    return x + y;
 }
-printaObjetos({
-    name: "Bruce Wayne",
-    vulgo: "Batman",
-});
+let soma = addNumber(4, 8);

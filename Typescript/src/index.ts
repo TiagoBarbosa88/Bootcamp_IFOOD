@@ -1,14 +1,10 @@
-type heroi = {
-  name: string;
-  vulgo: string
+/**
+ * Funções
+ * 
+ */
+
+function addNumber(x: number, y: number): number {
+  return x + y
 }
 
-function printaObjetos(pessoa: heroi){
-  console.log(pessoa);
-  
-}
-
-printaObjetos({
-  name: "Bruce Wayne",
-  vulgo: "Batman",
-})
+let soma: number = addNumber(4,8)
