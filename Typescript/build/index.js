@@ -1,16 +1,23 @@
 "use strict";
-/**
- * Classes
- */
-class Character {
-    constructor(name, stregth, skill) {
-        this.name = name,
-            this.stregth = stregth,
-            this.skill = skill;
-    }
-    attack() {
-        console.log(`Attack with ${this.stregth} points`);
-    }
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+/*
+* Decorators
+*/
+function ExibirNome(target) {
+    console.log(target);
 }
-const p1 = new Character("Superman", 10, 98);
-p1.attack();
+let Funcionario = class Funcionario {
+};
+Funcionario = __decorate([
+    ExibirNome
+], Funcionario);
+let Quincas = class Quincas {
+};
+Quincas = __decorate([
+    ExibirNome
+], Quincas);
