@@ -1,14 +1,11 @@
-/* 
-* Decorators
-*/
-function apiVersion(version: string) {
-  return (target: any) => {
-    Object.assign(target.prototype, { __version: version })
+class Api {
+  @length(3)
+  name: string;
+
+  constructor(name: string){
+    this.name = name;
   }
 }
 
-@apiVersion("1.10")
-class Api {}
-
-const api = new Api();
-console.log(api.__version);
+const api = new Api("Produtos")
+console.log(api.name);
